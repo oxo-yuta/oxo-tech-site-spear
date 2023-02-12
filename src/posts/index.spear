@@ -1,0 +1,18 @@
+<!-- <article class="article" cms-loop cms-content-type="posts">
+  <a href="/posts/{%= posts_#url %}" class="article-imageLink">
+    <img src="{%= posts_eye-catch %}" alt="" class="article-image">
+  </a>
+  <div class="article-rightBlock">
+    <time class="article-date">{%= posts_post-date %}</time>
+    <a href="{%= posts_#url %}" class="article-titleLink">
+      <h2 class="article-title">{%= posts_title %}	</h2>
+    </a>
+    <span class="article-tag">{%= posts_tags %}	</span>
+    <p class="article-description">{%= posts_digest %}</p>
+    <div class="article-author" cms-loop cms-field="author" cms-item-variable="author">
+      <img class="article-author-image" src="{%= posts_author_image %}"/>
+      <span class="article-author-name">{%= author_name %}</span>
+    </div>
+  </div>
+</article> -->
+<h1>aadsd</h1>
