@@ -11,50 +11,62 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
 </head>
 
-<body>
-  <header>
-    <img src="./images/logo.png">
-    <div class="spear-description">
-      <p><span>Welcome spear-cli</span> powered by Spearly CMS🚀</p>
-    </div>
-  </header>
-  <main class="container">
-    <section class="container__description margined-section">
-      <p>Spearly CMS is headless CMS easy to embed.</p>
-      <p>spear-cli is the magic tools make site more easy🧙</p>
-    </section>
-    <section class="container__usage margined-section">
-      <div class="container__spear-code">
-        <div>
-          <p>You can create component easily, You just create component spear file into components like follow:</p>
-        </div>
-        <pre><code class="html">
-            &lt;div&gt;
-              &lt;h1&gt;Hello first component&lt;/h1&gt;
-            &lt;/div&gt;
-          </code></pre>
-      </div>
-    </section>
-    <section class="container__usage margined-section">
-      <div class="container__spear-code">
-        <div>
-          <p>Then you insert this component like html tags:</p>
-        </div>
-        <pre><code class="html">
-          &lt;section&gt;
-            &lt;first-component&gt;&lt;/first-component&gt;
-          &lt;/section&gt;
-          </code></pre>
-      </div>
-    </section>
-    <section class="container__usage margined-section">
-      <p>You can check generated file from components and panges/index.spear</p>
-      <p>
-        <a href="./pages/index.html">Generated index here</a>
-      </p>
-    </section>
-  </main>
-  <script>hljs.initHighlightingOnLoad();</script>
-</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P8QQVJXBE1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-P8QQVJXBE1');
+</script>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <span class="logo-text">OXO-tech</span>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/">
+          Home
+        </a>
+        <a class="navbar-item" href="/about.html">
+          About
+        </a>
+      </div>
+    </div>
+  </nav>
+  <section id="articles" class="section">
+    <div class="container">
+
+      <!-- ここからコンテンツのループ -->
+      <article class="article" cms-loop cms-content-type="posts">
+        <a href="{%= posts_#url %}" class="article-imageLink">
+          <img src="{%= posts_eye-catch %}" alt="" class="article-image">
+        </a>
+        <div class="article-rightBlock">
+          <time class="article-date">{%= posts_post-date %}</time>
+          <a href="{%= posts_#url %}" class="article-titleLink">
+            <h2 class="article-title">{%= posts_title %}	</h2>
+          </a>
+          <span class="article-tag">{%= posts_tags %}	</span>
+          <p class="article-description">{%= posts_digest %}</p>
+          <div class="article-author" cms-loop cms-field="author" cms-item-variable="author">
+            <img class="article-author-image" src="{%= posts_author_image %}"/>
+            <span class="article-author-name">{%= author_name %}</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</body>
 </html>
