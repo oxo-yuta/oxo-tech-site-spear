@@ -1,0 +1,11 @@
+// Update some of Bulma's component variables
+$scheme-main: $background;
+$link: $accent;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

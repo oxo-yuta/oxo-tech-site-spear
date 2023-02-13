@@ -1,0 +1,25 @@
+.navbar {
+  $navbar: &; // 親要素を変数に定義
+  // padding: 48px;
+  &-brand {
+    margin-right: 64px;
+    .logo-text {
+      font-family: 'Dosis', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 61px;
+      color: $accent;
+    }
+  }
+  &-menu {
+    #{$navbar}-item {
+      font-family: 'Oswald';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      color: $text;
+    }
+  }
+}
+
